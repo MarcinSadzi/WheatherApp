@@ -32,9 +32,7 @@ const onEnterSubmit = event => {
     fadeInOut();
     let q = viewElems.searchInput.value;
     getWeatherByCity(q).then(data => {
-      console.log(data);
-      switchView();
-      fadeInOut()
+      displayWeatherData(data);
      
     });
   }
@@ -44,13 +42,33 @@ const onClickSubmit = () => {
   fadeInOut();
   let q = viewElems.searchInput.value;
   getWeatherByCity(q).then(data => {
-    console.log(data);
-    switchView();
-    fadeInOut()
+    displayWeatherData(data);
+    
   });
 };
 
 
+
+const displayWeatherData = data => {
+    switchView();
+    fadeInOut()
+    
+    const weatherInfo = data;
+   
+    console.log(weatherInfo.weather[0].icon)
+   
+    viewElems.weatherCity.innerText = weatherInfo.name;
+    viewElems.weatherIcon.src = `http://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`;                                    //weatherInfo.weather[0].icon;    
+    
+    const currTemp = weatherInfo.main.temp;
+    const maxTemp = weatherInfo.main.temp_max;
+    const minTemp = weatherInfo.main.temp_min;
+    
+    viewElems.weatherCurrentTemp.innerText = `Aktualna temperatura: ${currTemp}℃`;
+    viewElems.weatherMaxTemp.innerText = `Maksymalna temperatura: ${maxTemp}℃`;
+    viewElems.weatherMinTemp.innerText = `Minimalna temperatura: ${minTemp}℃`;
+    
+}
 
 const fadeInOut = () => {
   if (viewElems.mainContainer.style.opacity === '1' || viewElems.mainContainer.style.opacity === '') {
