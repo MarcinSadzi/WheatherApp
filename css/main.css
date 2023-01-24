@@ -1,7 +1,7 @@
 body {
     font-family: 'Baloo Tamma 2', cursive;
     margin: 0;
-    padding: 0;
+    
 }
 
 h1 {
@@ -14,30 +14,31 @@ main {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-image: url('http://picsum.photos/1600/1050');
+    background-image: url('https://picsum.photos/1600/1050');
     background-size: cover;
     background-position: center;
-}
+  }
 
-.weather-info {
+  .weather-info {
     height: auto;
     width: 40%;
     max-width: 1000px;
-    min-height: 300px;
+    max-height: 700px;
     padding: 5%;
     border-radius: 10px;
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,0.9) 100%);
     box-shadow: 0px 0px 10px 3px rgba(36,36,36,.05);
     transition-duration: .5s;
     transition-property: opacity;
-}
+  }
 
 .weather-info__search-view {
     display: flex;
+    height: 200px;
     flex-direction: column;    
     align-items: center;
     justify-content: space-between;
-    height: 200px;
+    
 }
     
 
@@ -68,7 +69,13 @@ main {
     align-items: center;
 }
 
+.weather-info__city img {
+    
+    width: 40%;
+}
+
 .weather-info__btn-return {
     padding: 5px 25px;
     border: 2px solid black;
 }
+
