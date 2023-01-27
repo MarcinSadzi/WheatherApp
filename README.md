@@ -1,2 +1,2 @@
 # WheatherApp
-Aplikacja pogodowa - pierwsza pka z JavaScript
+Aplikacja pogodowa - pierwsza apka z JavaScript
