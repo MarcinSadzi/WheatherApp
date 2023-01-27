@@ -1,2 +1,2 @@
 # WheatherApp
-Aplikacja pogodowa - kurs z Radkiem Madeckim cz.2
+Aplikacja pogodowa - pierwsza pka z JavaScript
